@@ -205,22 +205,22 @@ func TestGeneric(t *testing.T) {
 		{
 			where: loc(),
 			val:   []string{"42", "."},
-			str:   "42,.",
+			str:   "42\n.",
 			def:   []string{"one", "two", "three"},
 			in:    []string{"test", "-s42", "-s."},
 		},
 		{
 			where: loc(),
 			val:   []string{"42", "."},
-			str:   "42,.",
+			str:   "42\n.",
 			def:   []string{"one", "two", "three"},
-			in:    []string{"test", "-s42,."},
+			in:    []string{"test", "-s42\n."},
 		},
 		{
 			where: loc(),
 			val:   []string{"one", "two", "three"},
 			def:   []string{"one", "two", "three"},
-			str:   "one,two,three",
+			str:   "one\ntwo\nthree",
 			in:    []string{"test"},
 		},
 	} {

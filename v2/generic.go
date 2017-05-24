@@ -106,7 +106,7 @@ func (g *generic) Set(value string, opt Option) error {
 		*p = value
 		return nil
 	case *[]string:
-		a := strings.Split(value, ",")
+		a := strings.Split(value, "\n")
 		// If this is the first time we are seen then nil out the
 		// default value.
 		if opt.Count() <= 1 {
@@ -206,7 +206,7 @@ func (g *generic) String() string {
 	case *string:
 		return *p
 	case *[]string:
-		return strings.Join([]string(*p), ",")
+		return strings.Join([]string(*p), "\n")
 	case *int:
 		return strconv.FormatInt(int64(*p), 10)
 	case *int8:

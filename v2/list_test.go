@@ -4,7 +4,9 @@
 
 package getopt
 
-import "testing"
+import (
+	"testing"
+)
 
 var listTests = []struct {
 	where   string
@@ -45,7 +47,7 @@ var listTests = []struct {
 	{
 		loc(),
 		[]string{"test", "--list=one,two"},
-		nil, []string{"one", "two"},
+		nil, []string{"one,two"},
 		"",
 	},
 }
